@@ -22,7 +22,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "C:\\Users\\Wafiul Achdi\\Documents\\Belajar ngoding\\santrikoding\\bun\\backend-api\\prisma\\generated\\prisma",
+      "value": "C:\\Users\\Wafiul Achdi\\Documents\\Belajar ngoding\\santrikoding\\bun\\backend\\prisma\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -36,7 +36,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Wafiul Achdi\\Documents\\Belajar ngoding\\santrikoding\\bun\\backend-api\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Wafiul Achdi\\Documents\\Belajar ngoding\\santrikoding\\bun\\backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../..",
@@ -46,6 +46,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "mysql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
