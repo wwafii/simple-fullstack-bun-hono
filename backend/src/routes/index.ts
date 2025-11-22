@@ -4,8 +4,9 @@ import { verifyToken } from '../middlewares/auth.middleware';
 import { loginSchema, registerSchema } from '../schemas/auth.schema';
 import { register } from '../controllers/registerController';
 import { login } from '../controllers/loginController';
-import { createUser, getUsers } from '../controllers/userController';
-import { createUserSchema } from '../schemas/user.schema';
+import { createUser, deleteUser, getUserById, getUsers, updateUser } from '../controllers/userController';
+import { createUserSchema, updateUserSchema } from '../schemas/user.schema';
+
 
 
 const router = new Hono()
@@ -15,4 +16,9 @@ router.post('/login', validateBody(loginSchema), login);
 //protected route
 router.get('/users', verifyToken, getUsers);
 router.post('/users', verifyToken, validateBody(createUserSchema), createUser);
+router.get('/users/:id', verifyToken, getUserById);
+router.put('/users/:id', verifyToken, validateBody(updateUserSchema), updateUser);
+router.delete('/users/:id', verifyToken, deleteUser);
+
+
 export const Routes = router;
